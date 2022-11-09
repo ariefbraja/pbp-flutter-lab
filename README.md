@@ -1,16 +1,60 @@
 # counter_7
 
-A new Flutter project.
+TUGAS 7 PBP
 
-## Getting Started
+# Stateless Widget dan Stateful Widget
+Stateless : Widget yang statusnya tidak dapat diubah setelah dibuat, contohnya seperti Icon, IconButton, dan Text
+Stateful : bersifat dynamic dan dapat berubah setelah dibuat. Stateful widgets bisa berubah saat user men-trigger sebuah event. Contohnya seperti Checkbox, Radio, Slider, InkWell, Form, dan TextField
 
-This project is a starting point for a Flutter application.
+# Widget yang digunakan
+- Basic Widgets
+    - Appbar : menyediakan tampilan seperti daftar menu dan judul aplikasi. Bisa juga tombol-tombol action contohnya tombol pencarian dan notifikasi
+    - Row and Column : membuat user dapat mengatur children secara horizontal atau vertikal sesuai kebutuhan
+- Text Widgets : digunakan untuk menampilkan text seperti "Ganjil" dan "Genap"
+- Interactivity Widgets
+    - Floating Action Button : this widget floats on top of other widgets on the screen.
 
-A few resources to get you started if this is your first Flutter project:
+# setState()
+Fungsi : Notify the framework that the internal state of this object has changed
+Biasanya setState() berdampak pada statefulWidgets. setState() dapat memberitahu flutter untuk rebuild sebuah halaman saat sesuatu didefinisikan di dalam setState() changes
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# Const dan Final 
+Const : Digunakan untuk deklarasi variabel immutable yang nilainya bersifat konstan
+Final : Final diinialisasi pada saat pertama kali digunakan dan hanya di set sekali
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Implementasi Checklist
+1. Membuat app flutter baru dengan nama counter_7 dengan menjalankan kode:
+ ```
+ flutter create counter_7 
+ ```
+ 
+2. Membuat fungsi untuk mengetahui nilai counter apakah ganjil atau genap
+ ```  
+    String _numIdentifier() {
+      if (_counter % 2 == 1) {
+      return "GANJIL";
+      }
+      else {
+      return "GENAP";
+      }
+    }
+```
+3. Membuat visibility widget yang dalamnya berisi FloatingActionButton
+```
+Visibility(
+    visible: _counter <= 0 ? false : true,
+    child: (
+      FloatingActionButton(
+        onPressed: _decrementCounter,
+        child: const Icon(Icons.remove),
+      )
+    )
+```
+4. Mengubah text widgets and style-nya
+```
+Text(
+    _numIdentifier(),
+    style: TextStyle(color: _numIdentifier() == "GENAP" ? Colors.red : Colors.cyan),
+  ),
+```
+
