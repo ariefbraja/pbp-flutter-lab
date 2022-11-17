@@ -1,6 +1,4 @@
-# counter_7
-
-TUGAS 7 PBP
+# ================== TUGAS 7 ====================
 
 # Stateless Widget dan Stateful Widget
 Stateless : Widget yang statusnya tidak dapat diubah setelah dibuat, contohnya seperti Icon, IconButton, dan Text
