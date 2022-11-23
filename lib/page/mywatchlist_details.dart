@@ -25,6 +25,13 @@ class _MyWatchListDetailsPageState extends State<MyWatchListDetailsPage> {
         Text('Rating : ' + Details.fetcher.rating.toString()),
         Text('Status : ' + Details.fetcher.watched),
         Text('Review : ' + Details.fetcher.review),
+        const Spacer(),
+        TextButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: const Text('Back'),
+        ),
       ]),
     );
   }
