@@ -426,3 +426,36 @@ Pada main.dart yang sudah dibuat pada tugas 7 pekan lalu, ditambah juga widget D
 ```
 
 
+# ================== TUGAS 9 ====================
+Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Iya, kita bisa melakukan pengambilan data JSON tanpa membuat model terlebih dahulu, kita dapat melakukan fetch data dari tipe data json ke flutter menggunakan library bawaan flutter yaitu code generation library, tepatnya menggunakan json_serializable. Hal tersebut cocok untuk melakukan convert data json dalam skala menengah ke besar. Namun, jika data yang diolah masih dalam skala kecil, penggunaan model lebih efektif dan user friendly.
+
+# Widgets
+1. Future builder : mengolah data hasil konversi dari json
+2. async : menerima http response untuk di convert ke json
+3. Appbar widget : menampilkan drawer untuk navigasi dari 1 page ke page lainnya
+4. Column : mengatur layout dari teks yang akan ditampilkan\
+
+# Mekanisme pengambilan data dari JSON
+1. Menambahkan dependensi HTTP ke proyek agar dapat melakukan pertukaran data melalui HTTP request
+2. Membuat model sesuai response data yang diterima dari web service
+3. Membuat HTTP request ke web service menggunakan dependency http
+4. Mengonversikan objek yang didapat ke model yang telah dibuat
+5. Menampilkan data yang sudah dikonversi dengan widget Future Builder
+
+# Implementasi Checklist
+1. Copy isi file JSON pada tugas2ariefbraja.herokuapp.com/mywatchlist/json
+2. Masukkan isi file tersebut ke https://app.quicktype.io/
+3. Ubah Setup name menjadi My Watch List dan language menjadi Dart
+4. Copy paste code hasil konversi ke file watchlist.dart
+5. Menambahkan ```<uses-permission android:name="android.permission.INTERNET" />``` pada direktori android/app/src/main/AndroidManifest.xml
+6. Menambahkan ```http: ^0.13.5``` pada file pubspec.yaml pada bagian dependencies
+7. Menampilkan judul film menggunakan future builder dan menyimpan class field agar dapat diproses pada page details
+8. Menambahkan Textbutton yang berfungsi untuk navigasi ke halaman detail
+9. Mengambil fields yang sudah disimpan dan menampilkan informasi details mengenai film yang ditekan oleh user
+10. Menambahkan tombol back pada halaman detail dengan widget textbutton
+
+
+
+
+
