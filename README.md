@@ -447,7 +447,7 @@ Iya, kita bisa melakukan pengambilan data JSON tanpa membuat model terlebih dahu
 1. Copy isi file JSON pada tugas2ariefbraja.herokuapp.com/mywatchlist/json
 2. Masukkan isi file tersebut ke https://app.quicktype.io/
 3. Ubah Setup name menjadi My Watch List dan language menjadi Dart
-4. Copy paste code hasil konversi ke file watchlist.dart
+4. Copy paste code hasil konversi ke file mywatchlist_details.dart
 5. Menambahkan ```<uses-permission android:name="android.permission.INTERNET" />``` pada direktori android/app/src/main/AndroidManifest.xml
 6. Menambahkan ```http: ^0.13.5``` pada file pubspec.yaml pada bagian dependencies
 7. Menampilkan judul film menggunakan future builder dan menyimpan class field agar dapat diproses pada page details
